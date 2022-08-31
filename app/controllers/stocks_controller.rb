@@ -12,6 +12,11 @@ class StocksController < ApplicationController
     end
   end
 
+  def index
+    stocks = Stock.all
+    render json: stocks
+  end
+
   def show
     @stock = Stock.find_by(name: params[:name])
     render json: @stock

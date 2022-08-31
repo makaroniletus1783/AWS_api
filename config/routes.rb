@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     post "stocks", to: "stocks#create"
     get "stocks/:name", to: "stocks#show"
     get "stock/new", to: "stocks#new"
+    get "stocks", to: "stocks#index"
   end
 end
