@@ -69,6 +69,10 @@ GEM
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    committee (4.4.0)
+      json_schema (~> 0.14, >= 0.14.3)
+      openapi_parser (>= 0.11.1, < 1.0)
+      rack (>= 1.5)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     debug (1.6.2)
@@ -84,6 +88,7 @@ GEM
     io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
+    json_schema (0.21.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -96,6 +101,7 @@ GEM
     minitest (5.16.3)
     msgpack (1.5.6)
     msgpack (1.5.6-java)
+    mysql2 (0.5.4)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -119,6 +125,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.8-x64-mingw-ucrt)
       racc (~> 1.4)
+    openapi_parser (0.15.0)
     puma (5.6.5)
       nio4r (~> 2.0)
     puma (5.6.5-java)
@@ -157,7 +164,6 @@ GEM
     rake (13.0.6)
     reline (0.3.1)
       io-console (~> 0.5)
-    sqlite3 (1.4.4)
     strscan (3.0.4)
     strscan (3.0.4-java)
     thor (1.2.1)
@@ -181,10 +187,11 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  committee
   debug
+  mysql2
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
-  sqlite3 (~> 1.4)
   tzinfo-data
 
 RUBY VERSION

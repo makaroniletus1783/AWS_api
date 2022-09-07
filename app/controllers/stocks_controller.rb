@@ -4,7 +4,13 @@ class StocksController < ApplicationController
     @stock = Stock.new
   end
   def create
-    stock = Stock.new(stocks_params)
+    if Stock.find_by(name: params[:name]).present?
+      stock = Stock.find_by(name: params[:name])
+      stock.amount += params[:amount]
+    else
+      stock = Stock.new(stocks_params)
+    end
+
     if stock.save
       render json: stock
     else
