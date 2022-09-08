@@ -12,20 +12,28 @@ class StocksController < ApplicationController
     end
 
     if stock.save
-      render json: stock
+      redirect_to stock_path(stock.name)
     else
       render json: stock.errors, status: 422
     end
   end
 
   def index
-    stocks = Stock.all
-    render json: stocks
+    stocks = Stock.all.order(:name)
+    items = []
+    stocks.each do |stock|
+      if stock[:amount] != 0
+        items << {stock[:name] => stock[:amount]}
+      end
+    end
+    render json: items
+    
   end
 
   def show
     @stock = Stock.find_by(name: params[:name])
-    render json: @stock
+    item = {@stock.name => @stock.amount}
+    render json: item
   end
 
   private
