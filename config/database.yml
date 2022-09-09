@@ -11,15 +11,15 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: test
-  password: 'password'
+  username: tmp
+  password: 'Yuuki1783.com'
   host: localhost
   #socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
   #database: db/development.sqlite3
-  database: AWS-api_database
+  database: tmp_database
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,9 +27,9 @@ development:
 test:
   <<: *default
   #database: db/test.sqlite3
-  database: AWS-api_test
+  database: tmp_test
 
 production:
   <<: *default
   #database: db/production.sqlite3
-  database: AWS-api_production
+  database: tmp_production
