@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_08_144437) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_12_160649) do
+  create_table "sales", charset: "utf8", force: :cascade do |t|
+    t.string "name"
+    t.integer "amount", default: 1
+    t.float "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "stocks", charset: "utf8", force: :cascade do |t|
     t.string "name"
     t.integer "amount", default: 0

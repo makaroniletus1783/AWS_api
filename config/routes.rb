@@ -10,7 +10,12 @@ Rails.application.routes.draw do
   scope :v1 do
     post "stocks", to: "stocks#create"
     get "stocks", to: "stocks#index"
+    delete "stocks", to: "stocks#delete"
     get "stocks/:name", to: "stocks#show", as: :stock
+    post "sales", to: "sales#create"
+    get "sales", to: "sales#index"
+    get "sales/:name", to: "sales#show", as: :sale
+
 
   end
 end
