@@ -36,6 +36,11 @@ class StocksController < ApplicationController
     render json: item
   end
 
+  def delete
+    Stock.destroy_all
+    Sale.destroy_all
+  end
+
   private
 
   def stocks_params
