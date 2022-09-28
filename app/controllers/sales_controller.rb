@@ -1,23 +1,21 @@
 class SalesController < ApplicationController
   #require 'bigdecimal'
+  before_action :check_value, only: [:create]
+
 
   def create
-    unless params[:amount].present?
-      params[:amount] = 1
-    end
-
     if !Stock.find_by(name: params[:name]).present?
       render plain: "在庫に存在しません"
     elsif  params[:amount] > Stock.find_by(name: params[:name]).amount
       render plain: "在庫数が足りません"
     else
-      if Sale.find_by(name: params[:name]).present?
-        sale = Sale.find_by(name: params[:name])
-        sale.amount += params[:amount]
-        sale.price = params[:price]
-      else
-        sale = Sale.new(sales_params)
-      end
+      #if Sale.find_by(name: params[:name]).present?
+      #sale = Sale.find_by(name: params[:name])
+      #sale.amount += params[:amount]
+      #sale.price = params[:price]
+      #else
+      sale = Sale.new(sales_params)
+      #end
 
     stock = Stock.find_by(name: params[:name])
     stock.amount += -params[:amount]
@@ -50,6 +48,16 @@ class SalesController < ApplicationController
     sum = {"sales" => total}
 
     render json: sum
+  end
+
+  def check_value
+    if params[:amount].present?
+      if !params[:amount].is_a? Integer || params[:amount].to_i <= 0 #正の整数であるか確認
+        render json: {"message" => "ERROR"}
+      end
+    else
+      params[:amount] = 1 #amountがなければ、1にする
+    end
   end
 
   private
