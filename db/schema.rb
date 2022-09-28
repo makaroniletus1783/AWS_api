@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_12_160649) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_28_050224) do
   create_table "sales", charset: "utf8", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false, collation: "utf8mb4_bin"
     t.integer "amount", default: 1
     t.float "price"
     t.datetime "created_at", null: false
@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_12_160649) do
   end
 
   create_table "stocks", charset: "utf8", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false, collation: "utf8mb4_bin"
     t.integer "amount", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
