@@ -21,10 +21,10 @@ class StocksController < ApplicationController
 
   def index
     stocks = Stock.all.order(:name)
-    items = []
+    items = {}
     stocks.each do |stock|
-      if stock[:amount] != 0
-        items << {stock[:name] => stock[:amount]}
+      if stock.amount != 0
+        items.store(stock.name, stock.amount)
       end
     end
     render json: items

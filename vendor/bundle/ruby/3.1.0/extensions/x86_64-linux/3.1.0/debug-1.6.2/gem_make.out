@@ -1,0 +1,16 @@
+current directory: /var/app/AWS_api/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+/home/user/.rbenv/versions/3.1.2/bin/ruby -I /home/user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20220929-20962-eew0ma.rb extconf.rb
+creating Makefile
+
+current directory: /var/app/AWS_api/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\= clean
+
+current directory: /var/app/AWS_api/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\=
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /var/app/AWS_api/vendor/bundle/ruby/3.1.0/gems/debug-1.6.2/ext/debug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20220929-20962-kctq3x/debug
