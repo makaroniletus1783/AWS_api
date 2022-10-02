@@ -2,13 +2,8 @@ class SalesController < ApplicationController
   #require 'bigdecimal'
   before_action :check_value_sales, only: [:create]
 
-  @@total = 0.000
-
-
   def create
     sale = Sale.new(sales_params)
-
-    @@total += params[:price] * params[:amount] #合計金額に加算
 
     stock = Stock.find_by(name: params[:name])
     stock.amount += -params[:amount]
@@ -30,7 +25,16 @@ class SalesController < ApplicationController
   end
 
   def index
-    total = @@total.ceil(2)
+    sales = Sale.all
+    total = 0.000
+
+    sales.each do |sale|
+      if sale.price != nil
+        total += sale.price * sale.amount
+      end
+    end
+
+    total = total.ceil(2)
     total = sprintf("%0.2f", total)
 
     sum = {"sales" => total}
