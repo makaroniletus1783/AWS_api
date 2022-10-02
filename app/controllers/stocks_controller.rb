@@ -48,7 +48,7 @@ class StocksController < ApplicationController
     end
 
     if params[:amount].present?
-      if !params[:amount].is_a? Integer || params[:amount].to_i <= 0 #正の整数であるか確認
+      if (params[:amount] <= 0) || (!params[:amount].is_a? Integer) #正の整数であるか確認
         render json: {"message" => "ERROR"}
       end
     else

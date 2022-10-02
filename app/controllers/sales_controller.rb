@@ -2,9 +2,13 @@ class SalesController < ApplicationController
   #require 'bigdecimal'
   before_action :check_value_sales, only: [:create]
 
+  @@total = 0.000
+
 
   def create
     sale = Sale.new(sales_params)
+
+    @@total += params[:price] * params[:amount] #合計金額に加算
 
     stock = Stock.find_by(name: params[:name])
     stock.amount += -params[:amount]
@@ -17,20 +21,16 @@ class SalesController < ApplicationController
   end
 
   def show
-    sale = Sale.find_by(name: params[:name])
-    render json: sale.to_json(only: [:name, :amount, :price])
+    sales = Sale.where(name: params[:name]) #価格の変動を考慮
+    items = []
+    sales.each do |sale|
+      items << {"name" => sale.name, "amount" => sale.amount, "price" => sale.price}
+    end
+    render json: items
   end
 
   def index
-    sales = Sale.all
-    total = 0.000
-    sales.each do |sale|
-      if sale.price != nil
-      total += sale.price * sale.amount
-      end
-    end
-
-    total = total.ceil(2)
+    total = @@total.ceil(2)
     total = sprintf("%0.2f", total)
 
     sum = {"sales" => total}
@@ -40,7 +40,7 @@ class SalesController < ApplicationController
 
   def check_value_sales
     if params[:amount].present?
-      if !params[:amount].is_a? Integer || params[:amount].to_i <= 0 #正の整数であるか確認
+      if (params[:amount].to_i <= 0) || (!params[:amount].is_a? Integer) #正の整数であるか確認
         render json: {"message" => "ERROR"}
       end
     else
