@@ -1,0 +1,137 @@
+[33mcommit 5cc2eed4800eed62b2d645498042aa9455f2147c[m[33m ([m[1;36mHEAD -> [m[1;32maws_test[m[33m)[m
+Author: root <root@ip-172-31-28-91.ap-northeast-1.compute.internal>
+Date:   Sat Oct 1 12:01:02 2022 +0900
+
+    indexのjsonhash化
+
+[33mcommit 2a90342ed622797f30d8e0aff0e0f03aa2047aca[m[33m ([m[1;31morigin/aws_test[m[33m)[m
+Author: root <root@ip-172-31-28-91.ap-northeast-1.compute.internal>
+Date:   Fri Sep 30 03:43:59 2022 +0900
+
+    first commit
+
+[33mcommit 844fdc34f37acc3c1d6d478d59b0de674c1603d1[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: d780bda 9b5c086
+Author: Yuki Inaba <81730017+makaroniletus1783@users.noreply.github.com>
+Date:   Thu Sep 29 00:37:31 2022 +0900
+
+    Merge pull request #6 from makaroniletus1783/test2
+    
+    値の確認
+
+[33mcommit 9b5c086040ee4d8df9327a7c70d18eab9bab9d23[m[33m ([m[1;31morigin/test2[m[33m)[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Wed Sep 28 16:18:57 2022 +0900
+
+    値の確認
+
+[33mcommit 3d7ca8e35f6649bd129851d70b76b4f466bae718[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Wed Sep 28 14:32:58 2022 +0900
+
+    小文字と大文字ãの区別
+
+[33mcommit d780bda31c557de033da742dedd404f43c3de370[m
+Merge: 1058b37 70f5b6f
+Author: Yuki Inaba <81730017+makaroniletus1783@users.noreply.github.com>
+Date:   Wed Sep 28 12:37:28 2022 +0900
+
+    Merge pull request #5 from makaroniletus1783/test2
+    
+    小数第２まで表示
+
+[33mcommit 70f5b6f8f1bccc9d1d9a2a0212b7426bc2bc3ea8[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Wed Sep 28 12:35:01 2022 +0900
+
+    小数第２まで表示
+
+[33mcommit 1058b37d371cd7c6f9decfaa22b78441bf7ea4f7[m
+Merge: d43aa42 9b81549
+Author: Yuki Inaba <81730017+makaroniletus1783@users.noreply.github.com>
+Date:   Tue Sep 13 01:53:52 2022 +0900
+
+    Merge pull request #4 from makaroniletus1783/test2
+    
+    削除機能の実装
+
+[33mcommit 9b81549cdcbb89cb966f382e94d7780de590b6bf[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Tue Sep 13 01:53:03 2022 +0900
+
+    削除機能の実装
+
+[33mcommit d43aa42993875c11136ed57769a1e9e97e987944[m
+Merge: 3f796ad 6b5ca58
+Author: Yuki Inaba <81730017+makaroniletus1783@users.noreply.github.com>
+Date:   Fri Sep 9 14:53:24 2022 +0900
+
+    Merge pull request #3 from makaroniletus1783/test2
+    
+    Test2
+
+[33mcommit 6b5ca586a47216a35df0cb2e348079fbb9048199[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Fri Sep 9 14:47:41 2022 +0900
+
+    database.yml変更
+
+[33mcommit 72a961b31eabf1f67d78dd1d120cb445f672258c[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Fri Sep 9 14:30:10 2022 +0900
+
+    first commit
+
+[33mcommit 9e33a9820497bafe5c3bcfc391c442fab979d660[m[33m ([m[1;31morigin/test[m[33m)[m
+Merge: 3f796ad 3006605
+Author: Yuki Inaba <81730017+makaroniletus1783@users.noreply.github.com>
+Date:   Fri Sep 9 14:00:52 2022 +0900
+
+    Merge pull request #2 from makaroniletus1783/yuki
+    
+    stocksの機能とdigest認証の実装
+
+[33mcommit 3006605244e97e4a231a5d5c7a83830873b01a75[m[33m ([m[1;31morigin/yuki[m[33m)[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Fri Sep 9 00:12:47 2022 +0900
+
+    stocksの機能とdigest認証の実装
+
+[33mcommit 3f796ade1a96841d214ca5e9f18a043a104d37cf[m
+Merge: 9d6d377 3588592
+Author: Yuki Inaba <81730017+makaroniletus1783@users.noreply.github.com>
+Date:   Thu Sep 8 15:06:26 2022 +0900
+
+    Merge pull request #1 from makaroniletus1783/yuki
+    
+    MySQL に移行
+
+[33mcommit 35885927fbb87fc2748cd6d6c630d8c521140f16[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Thu Sep 8 15:04:15 2022 +0900
+
+    MYSQLに移行
+
+[33mcommit 7ae1bf353f8f47f312557f9da4508d22959e634a[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Thu Sep 8 02:34:52 2022 +0900
+
+    MYSQLの実装
+
+[33mcommit 54171ef9e9038d711c3b5477135e887da573fbc8[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Wed Aug 31 13:03:33 2022 +0900
+
+    third commit
+
+[33mcommit 740b158f55b27f85b82b785f09e38d7ec78650bd[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Wed Aug 31 02:01:22 2022 +0900
+
+    second commit
+
+[33mcommit 9d6d3776b67bd11e48a9190bfc9ea342333814c2[m
+Author: Yuki Inaba <daoyeyoushu@gmail.com>
+Date:   Tue Aug 30 22:19:00 2022 +0900
+
+    first commit

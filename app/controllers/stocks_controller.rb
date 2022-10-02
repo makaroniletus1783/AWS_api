@@ -1,6 +1,6 @@
 class StocksController < ApplicationController
   before_action :stocks_params, only: %i[create]
-  before_action :check_value, only: [:create]
+  before_action :check_value_stocks, only: [:create]
   def new
     @stock = Stock.new
   end
@@ -42,13 +42,18 @@ class StocksController < ApplicationController
     Sale.destroy_all
   end
 
-  def check_value
+  def check_value_stocks
+    if params[:name].length >9 || params[:name] !~ /^[A-Za-z]+$/  #商品名は8文字以下であり、アルファベットかどうか
+        render json: {"message" => "ERROR"}
+    end
+
     if params[:amount].present?
       if !params[:amount].is_a? Integer || params[:amount].to_i <= 0 #正の整数であるか確認
         render json: {"message" => "ERROR"}
       end
     else
       params[:amount] = 1 #amountがなければ、1にする
+
     end
   end
 
